@@ -1,8 +1,11 @@
+import dicesLogo from "../dices-logo.svg"
+
 function Header() {
     return (
-        <> 
-            Header 3
-        </>
+        <header> 
+            <img src={dicesLogo} alt="Tenzies logo"/>
+            <span>Tenzies Game </span>
+        </header>
     )
 }
 
