@@ -1,6 +1,6 @@
 function Dice(props) {
     return(
-        <div className="dice"> 
+        <div className={`dice ${props.isSelected ? "isSelected" : ""}`} > 
             <span> {props.number} </span>
         </div>
     )
