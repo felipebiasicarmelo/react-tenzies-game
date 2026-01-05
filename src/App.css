@@ -17,3 +17,33 @@ header > span {
   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
   font-size: 2rem;
 }
+
+main {
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+
+.tenzies-dices-container {
+  height: 100%;
+  width: 60vw;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+}
+
+.dice {
+  border: steelblue solid 5px;
+  width: 10vmin;
+  min-width: 40px; 
+  max-width: 100px; 
+  aspect-ratio: 1 / 1; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
