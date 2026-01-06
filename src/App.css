@@ -2,7 +2,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: antiquewhite;
+  background-color: steelblue;
   color:black;
   height: 80px;
   gap: 0 10px;
@@ -19,29 +19,31 @@ header > span {
 }
 
 main {
-  width: 100vw;
-  height: 80vh;
+  width: 100%;
+  min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding: 1rem;
+  background-image: url("./assets/Melamine-wood-005.png")
 }
 
 .tenzies-dices-container {
   height: 60vh;
-  width: 60vw;
+  width: 100vw;
   display: grid;
-  gap: 3rem;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-between;
+  align-content: space;
+  border: red solid 5px;
 }
 
 .dice {
-  border: gray solid 5px;
+  border: antiquewhite solid 8px;
   width: 10vmin;
-  min-width: 40px; 
+  min-width: 20px; 
   max-width: 100px; 
   aspect-ratio: 1 / 1; 
   display: flex;
@@ -53,25 +55,46 @@ main {
 
 
 .isSelected {
-  border: steelblue solid 5px;
+  border: darkgreen solid 8px;
 }
 
 
 .dice:hover {
-  border: steelblue solid 5px;
+  border: darkgreen solid 8px;
 }
 
 button {
-  padding: 0.75rem 1.5rem;      /* espaço interno */
-  border: none;                 /* remove borda padrão */
-  border-radius: 0.5rem;        /* cantos arredondados */
-  background-color: #4f46e5;    /* cor de fundo */
-  color: #fff;                  /* cor do texto */
-  font-size: 1rem;              /* tamanho da fonte */
-  font-weight: 600;             /* peso da fonte */
-  cursor: pointer;              /* mãozinha ao passar o mouse */
-  display: inline-flex;         /* alinha ícone + texto fácil */
+  padding: 0.75rem 1.5rem;     
+  border: none;                 
+  border-radius: 0.5rem;      
+  background-color: steelblue;   
+  color: #fff;                 
+  font-size: 1rem;             
+  font-weight: 600;     
+  cursor: pointer;             
+  display: inline-flex;    
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;                  /* espaço entre ícone e texto */
+  margin-top: 50px;           
 }
+
+
+@media (max-width: 600px) {
+  .tenzies-dices-container {
+  height: 60vh;
+  width: 60vw;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-content: center;
+  align-content: center;
+}
+
+  .dice {
+    border-width: 3px;
+    font-size: clamp(14px, 4vmin, 24px);
+  }
+
+}
+
